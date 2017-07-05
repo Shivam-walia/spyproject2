@@ -10,7 +10,7 @@ def get_user_id(insta_username):
         if len(user_info['data']):
 
             return user_info['data'][0]['id']
-            print  id
+
         else:
 
             return None
