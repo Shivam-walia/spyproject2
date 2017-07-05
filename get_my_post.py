@@ -7,6 +7,7 @@ def get_my_post():
     request_url = (BASE_URL + 'users/self/media/recent/?access_token=%s') % (APP_ACCESS_TOKEN)
     print 'GET request url : %s' % (request_url)
     my_media = requests.get(request_url).json()
+
     if my_media['meta']['code']==200:
         #coditional check
         if len(my_media['data']):
