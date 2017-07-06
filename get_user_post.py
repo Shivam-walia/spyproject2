@@ -1,6 +1,7 @@
 import requests
 from constants import *
 from get_user_id import  get_user_id
+#To display images downloaded
 import urllib
 #function initialised
 def get_user_post(insta_username):
@@ -11,6 +12,7 @@ def get_user_post(insta_username):
     request_url = (BASE_URL + 'users/%s/media/recent/?access_token=%s') % (user_id, APP_ACCESS_TOKEN)
     print 'GET request url : %s' % (request_url)
     user_media = requests.get(request_url).json()
+    #request responce code 200
     if user_media['meta']['code'] == 200:
  # coditional check
         if len(user_media['data']):
