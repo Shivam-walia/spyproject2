@@ -1,21 +1,38 @@
+#Test file is initialised
+
+#imports the request library
+
 import requests
+
+#import all the required files
 from self_info import self_info
 from get_user_info import get_user_info
 from get_user_id import get_user_id
 from get_my_post import get_my_post
 from get_user_post import  get_user_post
 from like_post import like_a_post
+from post_comments import post_comment
+
+#colour coding colorama library is used
 from colorama import init
 init()
+
+#background and front colour added
 from colorama import Back,Fore
+
+#function initialised
 def start_my_bot():
     Show_menu=True
+
+    #loop will be executed for menu choices
     while Show_menu:
         print Back.LIGHTBLUE_EX+ Fore.RED+ "---welcome to the Instabot---"
         print Fore.BLACK + "The menu option  shows the menu choices...!"
         print Fore.BLACK + "Select the option menu to get the datails of user"
-        menu_choices="Hello.....,what you want to do...? \n 1.self information of user \n 2.Information about other user \n 3.Get id of other user\n 4.Display My recent post \n 5.Disply recent post of other user \n 6.Get post id \n 7 .Like posts  \n 8. exit program"
+        menu_choices="Hello.....,what you want to do...? \n 1.self information of user \n 2.Information about other user \n 3.Get id of other user\n 4.Display My recent post \n 5.Disply recent post of other user \n 6.Get post id \n 7 .Like posts  \n 8.Comment on posts\n 9.exit program"
         choice=raw_input(menu_choices)
+
+        #checks for string length
         if len(choice)>0:
             choice=int(choice)
 
@@ -43,7 +60,11 @@ def start_my_bot():
 
                 like_a_post(insta_username)
             if choice==8:
+                insta_username=raw_input("please enter user name")
+                post_comment(insta_username)
+            if choice==9:
                 Show_menu= False
 
 
+#function calling to start instabot
 start_my_bot()

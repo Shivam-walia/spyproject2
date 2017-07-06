@@ -26,9 +26,14 @@
 #username="Rahul"
 #like_a_post(username)
 #function calling for post comments
-from post_comments import  post_comment
-insta_username=raw_input("Enter the username")
-post_comment(insta_username)
+#from post_comments import  post_comment
+#insta_username=raw_input("Enter the username")
+#post_comment(insta_username)
+
+#function call for delete negative comments
+from Negtive_comments_delete import delete_negative
+insta_username=raw_input("enter user name")
+delete_negative(insta_username)
 
 
 

@@ -5,15 +5,19 @@ from get_user_id import get_user_id
 
 #function initiated
 def get_user_info(insta_username):
+    #It takes the id of other user
+
     user_id=get_user_id(insta_username)
+
     if user_id==None:
         print"The user does dot exist"
         exit()
+
     request_url = (BASE_URL + 'users/%s?access_token=%s') % (user_id, APP_ACCESS_TOKEN)
     print 'GET request url : %s' % (request_url)
     user_info = requests.get(request_url).json()
 
-
+#Responce code for request  condition
     if user_info['meta']['code'] == 200:
         # conitional check
         if len(user_info['data']):
