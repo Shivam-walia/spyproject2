@@ -22,9 +22,13 @@
 #insta_username=raw_input("Please enter user name")
 #get_user_post(insta_username)
 
-from like_post import like_a_post
-username="Rahul"
-like_a_post(username)
+#from like_post import like_a_post
+#username="Rahul"
+#like_a_post(username)
+#function calling for post comments
+from post_comments import  post_comment
+insta_username=raw_input("Enter the username")
+post_comment(insta_username)
 
 
 

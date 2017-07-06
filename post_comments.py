@@ -15,5 +15,3 @@ def post_comment(insta_username):
         print'successfully add a new comment'
     else:
         print"unable to comment .. please Try again..!"
-insta_username=raw_input("Enter the username")
-post_comment(insta_username)
