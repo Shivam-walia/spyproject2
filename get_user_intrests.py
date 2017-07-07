@@ -25,13 +25,13 @@ def user_intrests(insta_username):
     request_url=(BASE_URL +'tags/search/?q=baddi_university&access_token=%s') %(APP_ACCESS_TOKEN)
     print "Get request url : %s" %(request_url)
     intrests_info=requests.get(request_url).json()
-    print intrests_info
+
 
     if intrests_info['meta']['code']==200:
 
         if len(intrests_info['data']):
 
-            return intrests_info['data'][0]
+            print  intrests_info['data'][0]
         else:
             return None
     else:
@@ -39,6 +39,5 @@ def user_intrests(insta_username):
         print 'Status code other than 200 received!'
         exit()
 
-insta_username=raw_input("Enter the user name")
 
-user_intrests(insta_username)
+
