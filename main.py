@@ -31,9 +31,12 @@
 #post_comment(insta_username)
 
 #function call for delete negative comments
-from Negtive_comments_delete import delete_negative
-insta_username=raw_input("enter user name")
-delete_negative(insta_username)
+#from Negtive_comments_delete import delete_negative
+#insta_username=raw_input("enter user name")
+#delete_negative(insta_username)
 
+#from delete_comments import delete_comment
+#insta_username=raw_input("Enter  user name")
+#delete_comment(insta_username)
 
 
