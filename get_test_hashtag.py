@@ -13,7 +13,7 @@ from get_post_id import get_post_id
 from constants import *
 
 #function defination
-def delete_negative(insta_username):
+def get_hashtag(insta_username):
 
     #takes the post id of user
     media_id=get_post_id(insta_username)
@@ -35,7 +35,7 @@ def delete_negative(insta_username):
                 comment_id=comments_data['data'][val]['id']
                 comment_text = comments_data['data'][val]['text']
 
-                #use of blob lib to analyse negativ comments if any
+                #use of blob lib to analyse negative comments if any
 
                 if comment_text[0]=='#':
 
@@ -46,11 +46,10 @@ def delete_negative(insta_username):
 
 
 
-
         else:
             print 'There are no existing comments on the post!'
     else:
         print 'Status code other than 200 received!'
 
 
-delete_negative("rahul_r2557")
+get_hashtag("rahul")
