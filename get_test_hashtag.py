@@ -1,8 +1,3 @@
-#library for drawing objects
-
-from  textblob import TextBlob
-
-from textblob.sentiments import NaiveBayesAnalyzer
 
 #request library initialised
 
@@ -35,16 +30,11 @@ def get_hashtag(insta_username):
                 comment_id=comments_data['data'][val]['id']
                 comment_text = comments_data['data'][val]['text']
 
-                #use of blob lib to analyse negative comments if any
+
 
                 if comment_text[0]=='#':
 
-                    print 'hastagfound : %s' % (comment_text)
-
-
-            #responce code condition check
-
-
+                    print 'The comments with hastag found : %s' % (comment_text)
 
         else:
             print 'There are no existing comments on the post!'
