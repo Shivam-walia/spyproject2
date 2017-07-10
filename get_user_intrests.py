@@ -16,7 +16,7 @@ import  matplotlib
 import requests
 from constants import *
 from get_user_post import get_user_post
-
+from get_post_id import get_post_id
 #function defination
 
 def user_intrests(insta_username):
@@ -31,7 +31,13 @@ def user_intrests(insta_username):
 
         if len(intrests_info['data']):
 
-            print  intrests_info['data'][0]
+            for val in range(0, len(intrests_info['data'])):
+                get_post_id = intrests_info['data'][val]
+                use_text = intrests_info['data'][val]['text']
+
+            if intrests_info[0]=='#':
+                print "These are the hashtags used : %s " %(intrests_info)
+
         else:
             return None
     else:
@@ -39,5 +45,6 @@ def user_intrests(insta_username):
         print 'Status code other than 200 received!'
         exit()
 
+user_intrests("rahul")
 
 
