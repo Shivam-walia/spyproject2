@@ -52,4 +52,3 @@ def get_hashtag(insta_username):
         print 'Status code other than 200 received!'
 
 
-get_hashtag("rahul")
