@@ -16,6 +16,7 @@ from post_comments import post_comment
 from Negtive_comments_delete import delete_negative
 #from get_user_intrests import user_intrests
 from get_test_hashtag import  get_hashtag
+from objective2 import pichart
 #colour coding colorama library is used
 from colorama import init
 init()
@@ -32,7 +33,7 @@ def start_my_bot():
         print Back.WHITE+ Fore.RED+ "---welcome to the Instabot---"
         print Fore.BLACK + "The menu option  shows the menu choices...!"
         print Fore.BLACK + "Select the option menu to get the datails of user"
-        menu_choices="Hello.....,what you want to do...? \n 1.self information of user \n 2.Information about other user \n 3.Get id of other user\n 4.Display My recent post \n 5.Disply recent post of other user \n 6.Get post id \n 7 .Like posts  \n 8.Comment on posts\n 9. Delete negative comments\n 10.Get user intrests \n 11.Get hashtags on comments\n 12. Exit program"
+        menu_choices="Hello.....,what you want to do...? \n 1.self information of user \n 2.Information about other user \n 3.Get id of other user\n 4.Display My recent post \n 5.Disply recent post of other user \n 6.Get post id \n 7 .Like posts  \n 8.Comment on posts\n 9. Delete negative comments\n 10.Display pichart bases on user interset \n 11.Get hashtags on comments\n 12. Exit program"
         choice=raw_input(menu_choices)
 
         #checks for string length
@@ -75,11 +76,10 @@ def start_my_bot():
             if choice==9:
                 insta_username=raw_input("please enter user name")
                 delete_negative(insta_username)
-        #Getting user intrests
- #           if choice==10:
-  #              insta_username=raw_input("please enter user name")
-   #             user_intrests(insta_username)
-        #Getting comments hashtags
+        #Display pie chart based on user intrests
+            if choice==10:
+                pichart()
+        #Getting comments with  hashtags
             if choice==11:
                 insta_username=raw_input("please enter user name")
                 get_hashtag(insta_username)
@@ -88,5 +88,3 @@ def start_my_bot():
                 Show_menu= False
 
 
-#function calling to start instabot
-start_my_bot()
