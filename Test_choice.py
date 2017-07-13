@@ -17,6 +17,7 @@ from Negtive_comments_delete import delete_negative
 #from get_user_intrests import user_intrests
 from get_test_hashtag import  get_hashtag
 from objective2 import pichart
+from sandbox_users import sandbox_user
 #colour coding colorama library is used
 from colorama import init
 init()
@@ -36,51 +37,67 @@ def start_my_bot():
         menu_choices="Hello.....,what you want to do...? \n 1.self information of user \n 2.Information about other user \n 3.Get id of other user\n 4.Display My recent post \n 5.Disply recent post of other user \n 6.Get post id \n 7 .Like posts  \n 8.Comment on posts\n 9. Delete negative comments\n 10.Display pichart bases on user interset \n 11.Get hashtags on comments\n 12. Exit program"
         choice=raw_input(menu_choices)
 
+
         #checks for string length
         if len(choice)>0:
             choice=int(choice)
         #self info of the user
             if choice==1:
+
+
                 self_info()
+
         #Getting another user info
             if choice==2:
+                sandbox_user()
                 insta_username=raw_input("Enter user name")
+
                 get_user_info(insta_username)
+
         #Getting id of another user
             if choice==3:
+                sandbox_user()
                 insta_username=raw_input("Enter the username of user")
                 result=get_user_id(insta_username)
                 print result
         #own recent posts
             if choice==4:
+
                 get_my_post()
         #User recent post
             if choice==5:
+                sandbox_user()
                 insta_username = raw_input("Please enter user name")
                 get_user_post(insta_username)
         #Post id of another user
             if choice==6:
+                sandbox_user()
                 insta_username=raw_input("Enter user name")
                 res=get_post_id(insta_username)
                 print res
         #like a post of user
             if choice==7:
+                sandbox_user()
                 insta_username = raw_input("Please enter user name")
 
                 like_a_post(insta_username)
         #comment on user posts
             if choice==8:
+                sandbox_user()
                 insta_username=raw_input("please enter user name")
                 post_comment(insta_username)
         #Deletes negative comments on posts
             if choice==9:
+                sandbox_user()
                 insta_username=raw_input("please enter user name")
                 delete_negative(insta_username)
         #Display pie chart based on user intrests
             if choice==10:
+
                 pichart()
         #Getting comments with  hashtags
             if choice==11:
+                sandbox_user()
                 insta_username=raw_input("please enter user name")
                 get_hashtag(insta_username)
         #Exit From program
