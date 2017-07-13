@@ -6,6 +6,4 @@ def sandbox_user():
     print "\n 1. The admin-shivam.walia \n"
     print"\n 2.rahul_r2557 \n"
     print "\n 3.svrankit \n"
-#function call
 
-sandbox_user()
